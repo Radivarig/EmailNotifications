@@ -4,5 +4,5 @@
 # rm -rf .cabal-sandbox; rm .cabal.sandbox.config
 cabal sandbox init
 cabal update
-cabal install HaskellNet HaskellNet-SSL text
+cabal install HaskellNet HaskellNet-SSL text regex-compat
 

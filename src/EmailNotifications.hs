@@ -11,6 +11,7 @@ import Network.HaskellNet.SMTP.SSL as SMTP -- (doSMTPSTARTTLS, sendPlainTextMail
 import Data.Text.Lazy (Text, pack)
 
 import EmailConfig
+import Template
 
 doSend :: String -> String -> String -> String -> Text -> [String] -> IO ()
 doSend _host _username _password subject body recipients = doSMTPSTARTTLS _host $ \c -> do

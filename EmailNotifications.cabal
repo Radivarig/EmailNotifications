@@ -19,6 +19,6 @@ library
   exposed-modules:     EmailNotifications
   -- other-modules:       
   -- other-extensions:    
-  build-depends:       text, bytestring, HaskellNet, HaskellNet-SSL, base >=4.8 && <4.9
+  build-depends:       containers, regex-compat, text, bytestring, HaskellNet, HaskellNet-SSL, base >=4.8 && <4.9
   hs-source-dirs:      src
   default-language:    Haskell2010
