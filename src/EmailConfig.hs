@@ -14,6 +14,6 @@ data Configuration = Configuration {
 
 readConfig :: IO Configuration
 readConfig = do
-  c <- readFile "config.txt"
+  c <- readFile "email.config"
   let config = read c :: Configuration
   return config
