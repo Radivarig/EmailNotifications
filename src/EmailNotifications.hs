@@ -17,8 +17,7 @@ doSend _host _username _password subject body recipients = doSMTPSTARTTLS _host 
   authSucceed <- SMTP.authenticate LOGIN _username _password c
   let sendToMany = \recipient -> sendPlainTextMail recipient _username subject body c
   if authSucceed
-    then sendPlainTextMail (head recipients) _username subject body c
-    -- then fmap sendToMany recipients
+    then mapM_ sendToMany recipients
     else print "Authentication error."
 
 -- sendMail :: Configuration -> Text -> [String] -> IO ()
